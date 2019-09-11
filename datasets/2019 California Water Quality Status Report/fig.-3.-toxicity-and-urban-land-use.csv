@@ -1,0 +1,9 @@
+﻿LandUseCategory,ToxicityCategory,Percent
+< 25% Urban,Toxic,18.3
+< 25% Urban,Non Toxic,81.7
+< 50% Urban,Toxic,15.4
+< 50% Urban,Non Toxic,84.6
+< 75% Urban,Toxic,25.9
+< 75% Urban,Non Toxic,74.1
+< 100% Urban,Toxic,29.9
+< 100% Urban,Non Toxic,70.1

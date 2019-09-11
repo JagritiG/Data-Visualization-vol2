@@ -1,0 +1,30 @@
+Housesale data :
+https://car.sharefile.com/share/view/s14d6028fcc046b1b
+
+Car sale data:
+https://fred.stlouisfed.org/series/TOTALSA
+
+us population data:
+https://vincentarelbundock.github.io/Rdatasets/datasets.html
+
+car data:
+http://www.oica.net/category/production-statistics/2018-statistics/
+http://www.rpubs.com/dksmith01/cars
+
+
+https://engaging-data.com/
+
+
+stock data scraping:
+https://www.scrapehero.com/scrape-nasdaq-stock-market-data/
+https://www.quora.com/Using-Python-whats-the-best-way-to-get-stock-data
+https://towardsdatascience.com/stock-market-analysis-in-python-part-1-getting-data-by-web-scraping-cb0589aca178
+https://blog.datahut.co/scraping-yahoo-finance-data-using-python/
+
+
+https://www.tableau.com/learn/articles/free-public-data-sets
+
+Electrical:
+https://energy.duke.edu/research/energy-data/resources?f%5B0%5D=field_dataset_topic%3A282
+https://wiki.openmod-initiative.org/wiki/Transmission_network_datasets#Other_lists_of_network_datasets
+http://sites.ieee.org/pes-iss/data-sets/#pvge
