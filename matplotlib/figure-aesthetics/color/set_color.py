@@ -1,3 +1,4 @@
+# color settings in matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -23,3 +24,4 @@ ax.tick_params(labelcolor='tab:gray')
 plt.legend()
 plt.savefig('set_color.pdf')
 plt.show()
+

@@ -25,16 +25,13 @@ def linear_plot(ax):
 
 # Plot without using constrained_layout, the labels overlap the axes
 fig, axs = plt.subplots(nrows=2, ncols=2, constrained_layout=False)
-
 for ax in axs.flat:
     linear_plot(ax)
-
 
 plt.savefig('set_axes_without_constrained_layout.pdf')
 
 # Plot using constrained_layout=True
 fig, axs = plt.subplots(nrows=2, ncols=2, constrained_layout=True)
-
 for ax in axs.flat:
     linear_plot(ax)
 

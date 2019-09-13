@@ -4,7 +4,7 @@ import numpy as np
 from matplotlib.ticker import NullFormatter   # useful for 'logit' scale
 
 # Fixing random state for reproducibility
-np.random.seed(19680801)
+np.random.seed(10000)
 
 # Make up some data in the interval (0, 1)
 # Draw random samples from a normal (Gaussian) distribution.
@@ -52,6 +52,6 @@ plt.gca().yaxis.set_minor_formatter(NullFormatter())
 # than usual, due to y-tick labels like "1 - 10^{-3}"
 plt.subplots_adjust(top=0.92, bottom=0.08, left=0.10, right=0.95, hspace=0.25, wspace=0.35)
 
-plt.savefig('set_grid.pdf')
+plt.savefig('create_subplot.pdf')
 plt.show()
 

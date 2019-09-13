@@ -5,7 +5,7 @@ import numpy as np
 
 # Generate mock data
 # Fixing random state for reproducibility
-np.random.seed(19680801)
+np.random.seed(100000)
 
 # Make up some data in the interval (0, 1)
 # Draw random samples from a normal (Gaussian) distribution.

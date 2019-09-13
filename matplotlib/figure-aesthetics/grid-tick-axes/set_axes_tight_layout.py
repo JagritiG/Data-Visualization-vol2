@@ -30,7 +30,6 @@ fig, axs = plt.subplots()
 linear_plot(axs, 24)
 plt.savefig('set_axes_without_tight_layout.pdf')
 
-
 # Plot with tight_layout
 fig, axs = plt.subplots()
 linear_plot(axs, 24)

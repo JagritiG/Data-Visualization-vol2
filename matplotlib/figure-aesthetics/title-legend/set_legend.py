@@ -1,10 +1,6 @@
 # Setting legends
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.legend_handler import (HandlerLineCollection,
-                                       HandlerTuple)
-import matplotlib.collections as mcol
-from matplotlib.lines import Line2D
 
 x = np.linspace(0, 2, 10)
 

@@ -24,7 +24,6 @@ def linear_plot(ax):
 
 # Plot without tight_layout, the labels overlap the axes
 fig, axs = plt.subplots(nrows=2, ncols=2)
-
 for ax in axs.flat:
     linear_plot(ax)
 
@@ -32,7 +31,6 @@ plt.savefig('set_axes_without_tight_layout_multiple_figure.pdf')
 
 # Plot with tight_layout
 fig, axs = plt.subplots(nrows=2, ncols=2)
-
 for ax in axs.flat:
     linear_plot(ax)
 

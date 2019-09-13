@@ -22,3 +22,4 @@ ax.plot(x, x**3, label='cubic', color='C3', linestyle='-.', lw=2)
 plt.legend()
 plt.savefig('set_text_font.pdf')
 plt.show()
+

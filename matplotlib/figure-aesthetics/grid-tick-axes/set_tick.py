@@ -43,3 +43,4 @@ plt.legend()
 # Save and show plot
 plt.savefig('set_ticks.pdf')
 plt.show()
+
