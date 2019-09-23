@@ -2,11 +2,11 @@
 .idea
 /ppt
 plot-table.docx
-/figure
+/matplotlib/figure
 first_figure.py
 dataviz_note.txt
 dataveez_matplotlib.py
 test_dataveez_matplotlib.py
 test.py
 /Data-cleaning
-color_setting.py
+/matplotlib/color_setting.py
