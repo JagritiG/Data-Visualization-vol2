@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 # TODO: Generate Data for plotting
 # Load the data from file
-apple = pd.read_csv("../datasets/stock/AAPL.csv")
+apple = pd.read_csv("../datasets/stock/AAPL.csv", header)
 print(apple.head())
 
 # # Check if there is any row with empty value

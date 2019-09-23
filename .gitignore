@@ -8,4 +8,5 @@ dataviz_note.txt
 dataveez_matplotlib.py
 test_dataveez_matplotlib.py
 test.py
-/dataextract
+/Data-cleaning
+color_setting.py
