@@ -1,4 +1,4 @@
-# Scatter plot using Irish dataset
+# Scatter plot using Iris dataset
 import pandas as pd
 import matplotlib.pyplot as plt
 font_param = {'size': 12, 'fontweight': 'semibold',
@@ -43,15 +43,27 @@ ax[1].legend()
 plt.tight_layout()
 plt.savefig('scatter_plot.pdf')
 
-# For each Species ,let's check what is petal and sepal distibutuon
-fig,ax=plt.subplots(1,2,figsize=(10, 5))
-setosa.plot(x="Sepal_length", y="Sepal_width", kind="scatter",ax=ax[0],label='setosa',color='r')
-versicolor.plot(x="Sepal_length", y="Sepal_width", kind="scatter",ax=ax[0],label='versicolor',color='b')
-virginica.plot(x="Sepal_length", y="Sepal_width", kind="scatter", ax=ax[0], label='virginica', color='g')
+# For each Species ,let's check what is petal and sepal distribution
+fig, ax = plt.subplots(1,2,figsize=(10, 5))
+setosa.plot(x="Sepal_length", y="Sepal_width",
+            kind="scatter", ax=ax[0],
+            label='setosa', color='r')
+versicolor.plot(x="Sepal_length", y="Sepal_width",
+                kind="scatter",ax=ax[0],
+                label='versicolor', color='b')
+virginica.plot(x="Sepal_length", y="Sepal_width",
+               kind="scatter", ax=ax[0],
+               label='virginica', color='g')
 
-setosa.plot(x="Petal_length", y="Petal_width", kind="scatter",ax=ax[1],label='setosa',color='r')
-versicolor.plot(x="Petal_length", y="Petal_width",kind="scatter",ax=ax[1],label='versicolor',color='b')
-virginica.plot(x="Petal_length", y="Petal_width", kind="scatter", ax=ax[1], label='virginica', color='g')
+setosa.plot(x="Petal_length", y="Petal_width",
+            kind="scatter",ax=ax[1],
+            label='setosa',color='r')
+versicolor.plot(x="Petal_length", y="Petal_width",
+                kind="scatter", ax=ax[1],
+                label='versicolor', color='b')
+virginica.plot(x="Petal_length", y="Petal_width",
+               kind="scatter", ax=ax[1],
+               label='virginica', color='g')
 
 ax[0].set_title('Sepal Comparison', font_param)
 ax[1].set_title('Petal Comparison', font_param)

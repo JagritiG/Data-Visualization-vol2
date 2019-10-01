@@ -6,9 +6,11 @@ font_param = {'size': 12, 'fontweight': 'semibold',
 
 plt.style.use('seaborn')
 
+# Dataset: nba
+
 # ToDo: Prepare data
 # Load nba data from file into pandas DataFrame
-nba = pd.read_csv('nba.csv',)
+nba = pd.read_csv('raw_nba.csv',)
 print(nba.head())
 print(nba.info())
 
