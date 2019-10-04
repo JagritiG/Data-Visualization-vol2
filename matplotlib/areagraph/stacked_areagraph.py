@@ -26,14 +26,14 @@ la_electricity_usage = residential_electricity[residential_electricity['County']
 
 
 # Plot Stacked Area Graph
-year = sd_electricity_usage['Year']
-usage = [sd_electricity_usage['Usage'],
-         sf_electricity_usage['Usage'],
-         la_electricity_usage['Usage']]
+x = sd_electricity_usage['Year']
+y = [sd_electricity_usage['Usage'],
+     sf_electricity_usage['Usage'],
+     la_electricity_usage['Usage']]
 labels = ['SAN DIEGO', 'SAN FRANCISCO', 'LOS ANGELES']
 
 fig, ax = plt.subplots()
-ax.stackplot(year, usage, labels=labels)
+ax.stackplot(x, y, labels=labels)
 ax.legend(loc='upper left')
 
 ax.set_xlabel('Year', fontsize=10)

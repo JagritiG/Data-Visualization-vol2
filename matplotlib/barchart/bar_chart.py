@@ -13,7 +13,7 @@ plt.style.use('seaborn-whitegrid')
 
 # Prepare data
 organization = ('Microsoft', 'Apple Inc.', 'Alphabet', 'Intel', 'Nvidia')
-y_pos = np.arange(len(organization))
+y = np.arange(len(organization))
 market_cap = [334.39, 619.76, 432.15, 132.06, 11.69]
 
 
@@ -27,8 +27,8 @@ formatter = FuncFormatter(billions)
 
 fig, ax = plt.subplots()
 ax.yaxis.set_major_formatter(formatter)
-plt.bar(y_pos, market_cap, width=0.8, align='center', color='royalblue')
-plt.xticks(y_pos, organization)
+plt.bar(y, height=market_cap, align='center', color='royalblue')
+plt.xticks(y, organization)
 ax.tick_params(width=0)
 plt.ylim(ymin=0)
 plt.ylabel('Market Capitalization (Billions of US $)')

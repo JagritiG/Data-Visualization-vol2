@@ -11,26 +11,13 @@ sns.set(style="white", palette="deep", color_codes=True)
 nba = pd.read_csv('processed_nba.csv')
 a = nba['Weight']
 
-# plot kernel density with filled area
-kde = sns.distplot(a, bins=15, hist=False,
-                   color='royalblue',
-                   kde_kws={"shade": True})
-kde.set_title('Weight Distribution of NBA Players', font_param)
-kde.set_xlabel('Weight in lb')
-kde.set_ylabel('Freguency')
-
-plt.tight_layout()
-
-# Save and show figure
-fig = kde.get_figure()
-fig.savefig('kde_filled_nba_weigth.png')
-plt.show()
-
 # Plot histogram and kernel density estimation (kde) with rugplot using distplot()
+kde_kws={"color": "k", "lw": 2, "label": "KDE"}
+hist_kws={"histtype": "stepfilled", "linewidth": 3,
+          "alpha": 1, "color": "lightblue"}
+
 dist = sns.distplot(a, rug=True, rug_kws={"color": "r"},
-                    kde_kws={"color": "k", "lw": 2, "label": "KDE"},
-                    hist_kws={"histtype": "stepfilled", "linewidth": 3,
-                              "alpha": 1, "color": "lightblue"})
+                    kde_kws=kde_kws, hist_kws=hist_kws)
 
 
 dist.set_title('Weight Distribution of NBA Players', font_param)
@@ -83,19 +70,19 @@ fig = kde.get_figure()
 fig.savefig('kde_nba_weigth.png')
 plt.show()
 
-# # plot kernel density with filled area
-# kde = sns.distplot(a, bins=15, hist=False, color='royalblue',
-#                    kde_kws={"shade": True})
-# kde.set_title('Weight Distribution of NBA Players', font_param)
-# kde.set_xlabel('Weight in lb')
-# kde.set_ylabel('Freguency')
-#
-# plt.tight_layout()
-#
-# # Save and show figure
-# fig = kde.get_figure()
-# fig.savefig('kde_filled_nba_weigth.png')
-# plt.show()
+# plot kernel density with filled area
+kde = sns.distplot(a, bins=15, hist=False, color='royalblue',
+                   kde_kws={"shade": True})
+kde.set_title('Weight Distribution of NBA Players', font_param)
+kde.set_xlabel('Weight in lb')
+kde.set_ylabel('Freguency')
+
+plt.tight_layout()
+
+# Save and show figure
+fig = kde.get_figure()
+fig.savefig('kde_filled_nba_weigth.png')
+plt.show()
 
 # Plot histogram with rug
 hr = sns.distplot(a, bins=15, kde=False, rug=True,

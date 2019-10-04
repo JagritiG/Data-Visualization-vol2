@@ -27,6 +27,7 @@ residential_electricity_by_county = residential_electricity.loc[['LOS ANGELES','
 residential_electricity_by_county.reset_index(inplace=True)
 print(residential_electricity_by_county.head())
 
+x = residential_electricity_by_county['2014']
 # Plot Pie Chart
 fig, ax = plt.subplots(figsize=(10, 5), subplot_kw=dict(aspect="equal"))
 
@@ -36,9 +37,11 @@ def func(pct, allvals):
     return "{:.1f}%\n({:d} GWh)".format(pct, absolute)
 
 
-wedges, texts, autotexts = ax.pie(residential_electricity_by_county['2014'],
-                                  autopct=lambda pct: func(pct, residential_electricity_by_county['2014']),
-                                  textprops=dict(color="w"))
+auto_pct=lambda pct: func(pct, residential_electricity_by_county['2014'])
+text_props=dict(color="w")
+
+wedges, texts, autotexts = ax.pie(x, autopct= auto_pct,
+                                  textprops=text_props)
 
 ax.legend(wedges, residential_electricity_by_county['County'],
           title="County",

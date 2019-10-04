@@ -13,7 +13,7 @@ plt.style.use('seaborn-whitegrid')
 
 # Prepare data
 organization = ('Microsoft', 'Apple Inc.', 'Alphabet', 'Intel', 'Nvidia')
-y_pos = np.arange(len(organization))
+y = np.arange(len(organization))
 market_cap = [334.39, 619.76, 432.15, 132.06, 11.69]
 
 
@@ -27,8 +27,8 @@ formatter = FuncFormatter(billions)
 
 fig, ax = plt.subplots()
 ax.xaxis.set_major_formatter(formatter)
-ax.barh(y_pos, market_cap, align='center', color='darkorange')
-ax.set_yticks(y_pos)
+ax.barh(y, width=market_cap, align='center', color='darkorange')
+ax.set_yticks(y)
 ax.set_yticklabels(organization)
 ax.invert_yaxis()  # labels read top-to-bottom
 ax.tick_params(width=0)

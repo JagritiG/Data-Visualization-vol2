@@ -10,15 +10,17 @@ tips = pd.read_csv('tips.csv',)
 print(tips.head())
 
 # Plot data
+x = [tips[tips['sex'] == 'Female']['tip'],
+            tips[tips['sex'] == 'Male']['tip']]
+label = ['Female', 'Male']
 box_props = dict(facecolor="lightblue")
 median_props = dict(color="coral", lw=1.5)
 flier_props = dict(markerfacecolor='b', marker='d')
-fig1, ax = plt.subplots()
 
-ax.boxplot([tips[tips['sex'] == 'Female']['tip'],
-            tips[tips['sex'] == 'Male']['tip']],
-           labels=['Female', 'Male'], flierprops=flier_props,
-           widths=0.35, patch_artist=True, boxprops=box_props,
+fig1, ax = plt.subplots()
+ax.boxplot(x, labels=label, flierprops=flier_props,
+           widths=0.35, patch_artist=True,
+           boxprops=box_props,
            medianprops=median_props)
 
 

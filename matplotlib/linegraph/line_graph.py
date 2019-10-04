@@ -17,14 +17,17 @@ print(sd_electricity.info())
 
 
 # Plot line graph of San Diego residential electricity usage
+x = sd_electricity['Year']
+y = sd_electricity['Usage']
+label = 'Electricity Usage (GWh)'
 fig, ax = plt.subplots()
-ax.plot(sd_electricity['Year'],
-        sd_electricity['Usage'],
-        label='Electricity Usage (GWh)', c='royalblue')
+ax.plot(x, y, label=label, c='royalblue')
 
 ax.set_xlabel('Year', fontsize=10, fontweight='semibold')
-ax.set_ylabel('Electricity Usage (GWh)', fontsize=10, fontweight='semibold')
-ax.set_title('San Diego Residential Electricity Usage\n(1990-2014)', font_param, c='b')
+ax.set_ylabel('Electricity Usage (GWh)', fontsize=10,
+              fontweight='semibold')
+ax.set_title('San Diego Residential Electricity Usage\n(1990-2014)',
+             font_param, c='b')
 ax.grid(color='lightgray', linestyle='--', linewidth='0.5')
 plt.xlim(1990, 2015)
 plt.legend()

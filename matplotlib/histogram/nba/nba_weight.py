@@ -7,10 +7,12 @@ plt.style.use('seaborn-whitegrid')
 
 # Load nba data from file into pandas DataFrame
 nba = pd.read_csv('processed_nba.csv',)
+x = nba['Weight']
+bins = 15
 
 # Plot histogram
 fig, ax = plt.subplots()
-ax.hist(nba['Weight'], 15, color='royalblue', density=1)
+ax.hist(x, bins, density=1, color='royalblue')
 
 ax.set_title('Weight Distribution of NBA Players', font_param)
 ax.set_xlabel('Weight in lb')
