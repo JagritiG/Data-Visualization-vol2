@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -58,7 +57,7 @@ fig.savefig('hist_nba_weigth.png')
 plt.show()
 
 # plot kernel density estimate
-kde = sns.distplot(a, bins=15, hist=False, color='royalblue')
+kde = sns.distplot(a, hist=False, color='royalblue')
 kde.set_title('Weight Distribution of NBA Players', font_param)
 kde.set_xlabel('Weight in lb')
 kde.set_ylabel('Freguency')
@@ -71,7 +70,7 @@ fig.savefig('kde_nba_weigth.png')
 plt.show()
 
 # plot kernel density with filled area
-kde = sns.distplot(a, bins=15, hist=False, color='royalblue',
+kde = sns.distplot(a, hist=False, color='royalblue',
                    kde_kws={"shade": True})
 kde.set_title('Weight Distribution of NBA Players', font_param)
 kde.set_xlabel('Weight in lb')
