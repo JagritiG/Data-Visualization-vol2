@@ -1,1 +1,1 @@
-Data Visualization using python libraries such as Matplotlib, Seaborn, Plotly, and Bokeh.
+Data Visualization using python libraries such as Pandas, Matplotlib, Seaborn, and Plotly.
