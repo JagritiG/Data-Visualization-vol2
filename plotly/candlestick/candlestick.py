@@ -1,21 +1,25 @@
+import plotly
 import plotly.graph_objects as go
 import pandas as pd
 
 
-apple_stock = pd.read_csv('AAPL2014-2015.csv')
-print(apple_stock.head())
+msft_stock = pd.read_csv('MSFT2014-18.csv')
+print(msft_stock.head())
 
-fig = go.Figure(data=[go.Candlestick(x=apple_stock['Date'],
-                open=apple_stock['Open'],
-                high=apple_stock['High'],
-                low=apple_stock['Low'],
-                close=apple_stock['Close'])])
+fig = go.Figure(data=[go.Candlestick(x=msft_stock['Date'],
+                open=msft_stock['Open'],
+                high=msft_stock['High'],
+                low=msft_stock['Low'],
+                close=msft_stock['Close'])])
 
 
 fig.update_layout(
-    title='Apple Stock Price',
-    yaxis_title='AAPL Stock',
+    title='Microsoft stock price for the period:2014-2018',
+    yaxis_title='Stock Price (USD)',
 )
+
+plotly.offline.plot(fig, filename='candlestick_microsoft_stock.html')
 fig.show()
+
 
 

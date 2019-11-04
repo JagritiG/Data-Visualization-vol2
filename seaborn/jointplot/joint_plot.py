@@ -19,7 +19,8 @@ scatter = sns.jointplot(x, y, data=data, kind='reg',
 scatter.set_axis_labels("Total Bill", "Tip")
 
 # add a title, set font size, and move the text above the total axes
-scatter.fig.suptitle("Jointplot of Total Bill and Tip", fontsize=12, fontweight='semibold', y=1)
+scatter.fig.suptitle("Jointplot of Total Bill and Tip",
+                     fontsize=12, fontweight='semibold', y=1)
 plt.tight_layout()
 scatter.savefig("jointplot_totalbill_tip.pdf")
 plt.show()

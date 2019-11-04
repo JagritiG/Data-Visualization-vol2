@@ -11,7 +11,7 @@ sns.set(style="whitegrid", color_codes=True)
 titanic = pd.read_csv("titanic.csv")
 
 
-# Draw a nested barplot to show survival for class and sex
+# Draw a barplot to show survival for class and sex
 x = "Pclass"
 y = "Survived"
 hue = "Sex"
@@ -23,7 +23,8 @@ g = sns.catplot(x, y, hue, data,
                 hue_order=['female', 'male'])
 g.despine(left=True)
 g.set_ylabels("Survival Probability")
-plt.title('Titanic Survival Probability', font_param, pad=0.4)
+plt.title('Titanic Survival Probability',
+          font_param, pad=0.4)
 
 g.savefig('bar_titanic.pdf')
 plt.show()

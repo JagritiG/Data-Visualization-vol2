@@ -26,7 +26,9 @@ scatter.set_axis_labels("Sepal length (mm)", "Sepal width (mm)")
 ax = plt.gca()
 ax.set_title('Sepal length vs Sepal Width', font_param)
 
-ax.legend(loc='upper right', fontsize='x-small', title='Species', title_fontsize=10, fancybox=True)
+ax.legend(loc='upper right', fontsize='x-small',
+          title='Species', title_fontsize=10,
+          fancybox=True)
 plt.tight_layout()
 
 # Save and show figure

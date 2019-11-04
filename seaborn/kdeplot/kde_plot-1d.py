@@ -11,7 +11,8 @@ nba = pd.read_csv('processed_nba.csv')
 x = nba['Weight']
 
 kde = sns.kdeplot(x, cbar=True, shade=True)
-kde.set_title('Weight Distribution of NBA Players', font_param)
+kde.set_title('Weight Distribution of NBA Players',
+              font_param)
 kde.set_xlabel('Weight in lb')
 kde.set_ylabel('Freguency')
 

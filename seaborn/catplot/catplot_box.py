@@ -11,16 +11,18 @@ sns.set(style="whitegrid", color_codes=True)
 tips = pd.read_csv("tips.csv")
 
 
-# Draw a boxplot of total bill vs day
+# Draw a box plot of total bill vs day
 x = "day"
 y = "total_bill"
 hue = "smoker"
 order=['Thur', 'Fri', 'Sat', 'Sun']
 data = tips
 
-g = sns.catplot(x=x, y=y, data=data, kind='box', hue=hue, order=order)
+g = sns.catplot(x=x, y=y, data=data, kind='box',
+                hue=hue, order=order)
 g.despine(left=True)
-plt.title('boxplot of total bill vs day', font_param, pad=0.4)
+plt.title('boxplot of total bill vs day',
+          font_param, pad=0.4)
 
 g.savefig('box_tips.pdf')
 plt.show()
